@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        PTN Frame Image Generator
+    </title>
+    <link href="./assets/style.css" rel="stylesheet" async="async">
+    <link href="./assets/prism.css" rel="stylesheet" async="async">
+    <script src="./assets/jquery-3.1.1.min.js"></script>
+    <script src="./assets/prism.js"></script>
+    <script src="./assets/fabric_with_gestures.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-blue-100">
+    <div id="wrapper" class="flex flex-col items-center justify-center h-screen">
+        <h1 class="text-4xl font-bold">PTN Frame Generator</h1>
+        <hr class="w-1/2 my-4">
+        <div id="content" class="flex flex-col items-center justify-center">
+            <canvas id="preview_panel" width="800" height="800" style="border: 1px solid black;">
+            </canvas>
+            <div class="file-input-box flex flex-col items-center justify-center">
+                <input type="file" name="file" onchange="onFileChange(this)" class="file-input flex items-center justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            </div>
+            <button id="download" disabled="" class="flex items-center justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="download()">
+                <h1 id="download-text" class="text-xl text-gray-900">Download</h1>
+            </button>
+            <div id="designs" style="display:none;">
+                <img class="design active" src="./assets/frontend.png" data-design="0" crossorigin="anonymous">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./assets/main.js" async="async"></script>
+
+</html>
